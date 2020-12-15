@@ -1,0 +1,107 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Smart Lab
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<!-- 
+<div class="row">
+  <div class="column">
+    <p> Total people in room: {{count}} people</p>
+
+  </div>
+  <div class="column">
+    <p>Total table in room: 7 tables</p>
+  </div>
+</div> -->
+
+<div class="row">
+
+  <div class="column">
+  	{% if d4 %}
+	<div id="button1"> Table 4: {{d4}} Student(s)</div>
+{% else %}
+	<div id="button0"> Table 4:  Available now!</div>
+{% endif %}
+  </div>
+
+  <div class="column" >
+   <p> * Total people in room: {{count}} people</p>
+
+    <p>* Total table in room: 7 tables</p>
+  </div>
+
+ 
+
+  <div class="column">
+    {% if d3 %}
+  <div id="button1"> Table 3: {{d3}} Student(s)</div>
+{% else %}
+  <div id="button0"> Table 3:  Available now!</div>
+{% endif %}
+  </div>
+
+  <div class="column">
+    {% if d7 %}
+  <div id="button1"> Table 7: {{d6}} Student(s)</div>
+{% else %}
+  <div id="button0"> Table 7:  Available now!</div>
+{% endif %}
+  </div>
+
+ 
+
+  <div class="column">
+    {% if d2 %}
+  <div id="button1"> Table 2: {{d2}} Student(s)</div>
+{% else %}
+  <div id="button0"> Table 2:  Available now!</div>
+{% endif %}
+  </div>
+
+  <div class="column">
+    {% if d6 %}
+  <div id="button1"> Table 6: {{d6}} Student(s)</div>
+{% else %}
+  <div id="button0"> Table 6:  Available now!</div>
+{% endif %}
+  </div>
+
+ <div class="column">
+    {% if d1 %}
+  <div id="button1"> Table 1: {{d1}} Student(s)</div>
+{% else %}
+  <div id="button0"> Table 1:  Available now!</div>
+{% endif %}
+  </div>
+
+ <div class="column">
+    {% if d5 %}
+  <div id="button1"> Table 5: {{d5}} Student(s)</div>
+{% else %}
+  <div id="button0"> Table 5:  Available now!</div>
+{% endif %}
+  </div>
+
+ 
+</div>
+
+
+
+
+
+<br>
+
+<center><img src="{% static 'images/cam.jpg' %}" class="responsive-img" style="max-height:400px"/>
+</center>
+<p style="text-align: center; font-weight:bold">
+  Image Realtime Of BK-Maker
+</p>
+<!-- <video width="960" height="560" controls>
+  <source src="{% static '01.mp4' %}" type="video/mp4">
+  	<source src="{% static '01.mp4' %}" type="video/ogg"> -->
+<!-- Your browser does not support the video tag. -->
+</video>
+{% endblock %}
